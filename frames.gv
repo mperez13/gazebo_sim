@@ -1,9 +1,0 @@
-digraph G {
-"odom" -> "chassis"[label="Broadcaster: /gazebo\nAverage rate: 20.211 Hz\nMost recent transform: 166.434 ( 0.047 sec old)\nBuffer length: 4.750 sec\n"];
-"chassis" -> "left_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.211 Hz\nMost recent transform: 166.461 ( 0.020 sec old)\nBuffer length: 4.701 sec\n"];
-"chassis" -> "right_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.211 Hz\nMost recent transform: 166.461 ( 0.020 sec old)\nBuffer length: 4.701 sec\n"];
-edge [style=invis];
- subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
-"Recorded at time: 166.481"[ shape=plaintext ] ;
- }->"odom";
-}
