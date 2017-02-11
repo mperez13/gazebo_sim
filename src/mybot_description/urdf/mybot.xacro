@@ -1,9 +1,9 @@
 <?xml version='1.0'?>
+<!-- This is the primary file that loads the other 3 files.  It contains URDF items such as links & joints -->
+<!--  -->
 
 <robot name="myrobot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:property name="cameraSize" value="0.05"/>
-  <xacro:property name="cameraMass" value="0.1"/>
 
   <xacro:include filename="$(find mybot_description)/urdf/mybot.gazebo" />
   <xacro:include filename="$(find mybot_description)/urdf/materials.xacro" />
@@ -29,6 +29,8 @@
       </geometry>
     </collision>
 
+
+    <!-- the base frame (chassis) is represented by a box -->
     <visual name='chassis_visual'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
@@ -54,6 +56,7 @@
       </surface>
     </collision>
 
+    <!-- caster is represented by a sphere -->
     <visual name='caster_visual'>
       <origin xyz="-0.15 0 -0.05" rpy=" 0 0 0"/>
       <geometry>
@@ -62,7 +65,7 @@
     </visual>
   </link>
 
-
+  <!-- Left Wheel -->
   <link name="left_wheel">
     <!--origin xyz="0.1 0.13 0.1" rpy="0 1.5707 1.5707"/-->
     <collision name="collision">
@@ -88,6 +91,7 @@
     </inertial>
   </link>
 
+  <!-- Right Wheel -->
   <link name="right_wheel">
     <!--origin xyz="0.1 -0.13 0.1" rpy="0 1.5707 1.5707"/-->
     <collision name="collision">
@@ -113,10 +117,9 @@
     </inertial>
   </link>
 
-
+  <!-- Joints to make sure that wheel are attached to the chassis -->
   <joint type="continuous" name="left_wheel_hinge">
     <origin xyz="0.1 0.15 0" rpy="0 0 0"/>
-    <!--origin xyz="0.1 0.13 0" rpy="0 1.5707 1.5707"/-->
     <child link="left_wheel"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -126,48 +129,12 @@
 
   <joint type="continuous" name="right_wheel_hinge">
     <origin xyz="0.1 -0.15 0" rpy="0 0 0"/>
-    <!--origin xyz="0.1 -0.13 0" rpy="0 1.5707 1.5707"/-->
     <child link="right_wheel"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="100" velocity="100"/>
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
-
-
-  <link name="camera">
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="${cameraSize} ${cameraSize} ${cameraSize}"/>
-      </geometry>
-    </collision>
-
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="${cameraSize} ${cameraSize} ${cameraSize}"/>
-      </geometry>
-      <material name="green"/>
-    </visual>
-
-    <inertial>
-      <mass value="${cameraMass}" />
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <box_inertia m="${cameraMass}" x="${cameraSize}" y="${cameraSize}" z="${cameraSize}" />
-      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
-    </inertial>
-  </link>
-
-  <joint name="camera_joint" type="fixed">
-    <axis xyz="0 1 0" />
-    <origin xyz=".2 0 0" rpy="0 0 0"/>
-    <parent link="chassis"/>
-    <child link="camera"/>
-  </joint>
-
-
-
 
 
 </robot>
