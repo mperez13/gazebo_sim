@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/marifer/mybot_ws/src
+CMAKE_SOURCE_DIR = /home/marifer/ros-opencv/maria/mybot_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/marifer/mybot_ws/build
+CMAKE_BINARY_DIR = /home/marifer/ros-opencv/maria/mybot_ws/build
 
 # Utility rule file for doxygen.
 
@@ -67,6 +67,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/marifer/mybot_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/marifer/mybot_ws/src /home/marifer/mybot_ws/src /home/marifer/mybot_ws/build /home/marifer/mybot_ws/build /home/marifer/mybot_ws/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/marifer/ros-opencv/maria/mybot_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/marifer/ros-opencv/maria/mybot_ws/src /home/marifer/ros-opencv/maria/mybot_ws/src /home/marifer/ros-opencv/maria/mybot_ws/build /home/marifer/ros-opencv/maria/mybot_ws/build /home/marifer/ros-opencv/maria/mybot_ws/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 

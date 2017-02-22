@@ -1,0 +1,1 @@
+source ~/ros-opencv/maria/mybot_ws/devel/setup.bash

@@ -1,2 +1,2 @@
-
--DCATKIN_DEVEL_PREFIX=/home/marifer/mybot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/marifer/mybot_ws/install -G Unix Makefiles
+gazebo_ros_pkgs/gazebo_msgs:gazebo_ros_pkgs/gazebo_plugins:gazebo_ros_pkgs/gazebo_ros:gazebo_ros_pkgs/gazebo_ros_control:gazebo_ros_pkgs/gazebo_ros_pkgs
+-DCATKIN_DEVEL_PREFIX=/home/marifer/ros-opencv/maria/mybot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/marifer/ros-opencv/maria/mybot_ws/install -G Unix Makefiles

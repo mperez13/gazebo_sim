@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/marifer/mybot_ws/install/setup.sh
+    local-name: /home/marifer/ros-opencv/maria/mybot_ws/install/setup.sh

@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<!-- Species different colors for easier access-->
 <robot>
 
   <material name="black">
