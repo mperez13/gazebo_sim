@@ -21,8 +21,8 @@
 
 
 [1]: run_gazebo.sh
-[2]: [run_gmapping.sh]
-[3]: [run_rviz.sh]
-[4]: [run_teleop.sh]
-[5]: [run_savemap] 
-[6]: [run_mapdemo.sh]
+[2]: run_gmapping.sh
+[3]: run_rviz.sh
+[4]: run_teleop.sh
+[5]: run_savemap.sh
+[6]: run_mapdemo.sh
