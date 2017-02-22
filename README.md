@@ -1,16 +1,28 @@
 # mybot_ws
 
-Before you run gazebo and rviz, make sure to add `source ~/mybot_ws/devel/setup.bash` in the `.bashrc` file
+## Create map in Rviz, Run in seperate terminals:
 
-### To run it:
+1. [run_gazebo.sh][1]
+2. [run_gmapping.sh][2]
+3. [run_rviz.sh][3]
+4. [run_teleop.sh][4]
 
-1. in `~/mybot_ws` run `run_gazebo.sh` first => this should open Gazebo
-2. After that you could start `run_cmd.sh` or `run_rviz.sh` in any order.
-  1. In the rviz, in the left panel Display 
-    - change the `Fixed Frame` to `odom` (the red check mark should turn green)
-    - then add the robot model by clicking the add button. Select `RobotModel` and click okay
-    - then add the camera by clickind add and selecting camera
-      - for camera: change `Image Topic` to `/mybot/camera1/image_raw`
+## Save map
 
-In the bottom of the right panel you should see the camera view. 
+1. [run_savemap][5] - change where the file will be saved
 
+## Exit out of Everything to Load the map
+
+## Load Map
+
+1. [run_gazebo.sh][1]
+2. [run_mapdemo.sh][6]
+3. [run_rviz.sh][3]
+
+
+[1]: run_gazebo.sh
+[2]: [run_gmapping.sh]
+[3]: [run_rviz.sh]
+[4]: [run_teleop.sh]
+[5]: [run_savemap] 
+[6]: [run_mapdemo.sh]
